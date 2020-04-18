@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.babylon.smsserver">
+
+
+    <!-- To use SMS based services -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+
+    <application
+        android:name="com.babylon.smsserver.GlobalApplication"
+        android:allowBackup="true"
+        android:usesCleartextTraffic="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/noactionbar_whiteStatus">
+        <activity android:name=".Splash"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/noactionbar_whiteStatus" />
+
+        <receiver android:name=".MessageReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+
+        <service
+            android:name=".CloudMessagingService"
+            android:exported="false"
+            >
+
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+
+        </service>
+
+
+
+
+
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="true" />
+
+
+        <!-- Add these line -->
+        <!-- [START] -->
+        <!-- Set custom default icon -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_stat_phone" />
+        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming notification message.-->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/coloraccent" />
+        <!--  Set fcm default channel-->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+        <!-- [END] -->
+
+
+
+
+    </application>
+
+</manifest>

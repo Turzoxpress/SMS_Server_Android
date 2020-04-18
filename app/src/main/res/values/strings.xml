@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SMS Server</string>
+
+    <string name="default_notification_channel_id">101</string>
+
+
+</resources>

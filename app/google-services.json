@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "569322326611",
+    "firebase_url": "https://sms-server-testing.firebaseio.com",
+    "project_id": "sms-server-testing",
+    "storage_bucket": "sms-server-testing.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569322326611:android:fce1e89ec105f870d654a6",
+        "android_client_info": {
+          "package_name": "com.babylon.smsserver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "569322326611-ct0ab9v397kq8bmjorpsqitlvrgcngk8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.babylon.smsserver",
+            "certificate_hash": "1285b5bdc54a30c2c20556e45e0b9dd03c3db410"
+          }
+        },
+        {
+          "client_id": "569322326611-vqes3tpnjchrvl4e1l4p1ok056asa2mh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDahJpW3aRv8IIjSbsYb5r4AcurJdv614M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "569322326611-vqes3tpnjchrvl4e1l4p1ok056asa2mh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
