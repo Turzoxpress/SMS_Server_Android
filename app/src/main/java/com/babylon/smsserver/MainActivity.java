@@ -167,20 +167,20 @@ public class MainActivity extends AppCompatActivity implements MessageListener {
             statusTxt.setText(statusTxt.getText()+"\n"+"User confirmed his/her donation");
             statusTxt.setText(statusTxt.getText()+"\n"+"Passing user response to Master Server...");
             statusTxt.setText(statusTxt.getText()+"\n"+"Notifying the user about his response by SMS...");
-            sendSMS(number,"ত্রাণ সহায়তা নিশ্চিত করার জন্য আপনাকে ধন্যবাদ! আপনাকে সাহায্য করতে পেরে আমরা আনন্দিত!");
+            sendSMS(number,"আপনাকে অনেক ধন্যবাদ নিশ্চিত করার জন্য।");
 
         }else if(message.equalsIgnoreCase("0")){
 
             statusTxt.setText(statusTxt.getText()+"\n"+"User declined his/her donation");
             statusTxt.setText(statusTxt.getText()+"\n"+"Passing user response to Master Server...");
             statusTxt.setText(statusTxt.getText()+"\n"+"Notifying the user about his response by SMS...");
-            sendSMS(number,"আমরা খুবই দুঃখিত যে আপনি ত্রাণ সহায়তা পাননি! আমরা বিষয়টি গুরুত্ব সহকারে দেখব এবং যথাযথ অ্যাকশন নিব! তথ্য দিয়ে সহায়তা করার জন্য আপনাকে অসংখ্য ধন্যবাদ!");
+            sendSMS(number,"আমরা খুবই দুঃখিত যে আপনি ত্রাণ পাননি। আমরা বিষয়টি খতিয়ে দেখছি।");
 
         }else{
 
             statusTxt.setText(statusTxt.getText()+"\n"+"User response is invalid.");
             statusTxt.setText(statusTxt.getText()+"\n"+"Notifying the user about his response by SMS...");
-            sendSMS(number,"দুঃখিত, আপনি ভুল নম্বর দিয়েছেন। আপনি যদি ত্রাণ সহায়তা পেয়ে থাকেন তাহলে ইংরেজি সংখ্যায় '1' লিখে আমাদেরকে রিপ্লাই দিন, না পেয়ে থাকলে '0' লিখে পাঠান। ধন্যবাদ!");
+            sendSMS(number,"আপনি ভুল রিপ্লাই করেছেন। ত্রাণ পেয়ে থাকলে '1' আর না পেয়ে থাকলে '0' লিখে রিপ্লাই দিন।");
             //statusTxt.setText(statusTxt.getText()+"\n"+"Passing user response to Master Server...");
 
         }
